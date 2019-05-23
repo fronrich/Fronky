@@ -14,7 +14,7 @@ extra_newline no
 # Positioning
 alignment middle_middle
 gap_x -310
-gap_y -40
+gap_y 0
 
 # Window Hints
 own_window yes
@@ -51,7 +51,7 @@ use_xft yes
 xftalpha 0.1
 xftfont Latin Modern Roman:size=14
 color0 white
-color1 99CCCC
+color1 FF7D7D
 color2 FFA300
 color3 grey
 
@@ -72,4 +72,4 @@ also has a public ip when connected to the web. Its
 public ip is ${color1}${exec curl -s www.icanhazip.com}${color0}. Your current signal strength
 is around ${color1}${wireless_link_qual_perc wlp3s0}%${color0}. Up info: ${color1}${upspeed wlp3s0}${color0}/ ${color1}${totalup wlp3s0}${color0}.
 Down info: ${color1}${downspeed wlp3s0}${color0}/ ${color1}${totaldown wlp3s0}${color0}
-#
+# TODO PROCESSING
