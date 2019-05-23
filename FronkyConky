@@ -1,28 +1,64 @@
--- fork conky in background
+# A conky by Fronrich Puno
+# Feel free to edit as desired
+# -------------------------------
+
+# Init
 background yes
--- position (works with conky manager)
-alignment top_right
-gap_y 20
-gap_x 20
-cpu_avg_samples 4
--- text display
-use_xft yes
-xftfont Nakula-11
-use_spacer left
-pad_percents 3
--- window options
--- solves flickering
 double_buffer yes
--- transparent, independent window
+net_avg_samples 2
+no_buffers yes
+out_to_console no
+out_to_stderr no
+extra_newline no
+
+# Positioning
+alignment middle_middle
+gap_x -310
+gap_y -40
+
+# Window Hints
 own_window yes
-own_window_type override
+own_window_type normal
 own_window_transparent yes
--- update intervals
-update_interval 0.5
-total_run_times 0
-update_interval_on_battery 10
--- misc. UI 
-default_bar_size 60 8
-temperature_unit Fahrenheit
+own_window_colour 000000
+own_window_argb_visual yes
+own_window_argb_value 0
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+# Draw
+border_width 1
+cpu_avg_samples 2
+default_color white
+default_outline_color white
+default_shade_color white
+draw_borders no
+draw_graph_borders yes
+draw_outline no
+draw_shades no
+
+minimum_size 120 270
+stippled_borders 0
+update_interval 1.0
+uppercase no
+use_spacer none
+pad_percents 3
+
+show_graph_scale no
+show_graph_range no
+
+# Text / Coloring
+use_xft yes
+xftalpha 0.1
+xftfont Latin Modern Roman:size=14
+color0 white
+color1 99CCCC
+color2 FFA300
+color3 grey
 
 TEXT
+
+${color0}${Font Latin Modern Roman :size=24} ${alignr}Internet Protocol${Font Latin Modern Roman:size=12}
+ad·​dress / ə-ˈdres  / adj -
+This computer's local ip is ${color green}${gw_ip}${color0}. This computer
+also has a public ip when connected to the web. Its
+public ip is ${color green}${exec curl -s www.icanhazip.com}${color0}.
