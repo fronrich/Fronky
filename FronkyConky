@@ -62,7 +62,8 @@ ${Font Latin Modern Roman :size=24} ${alignr}Time${Font Latin Modern Roman:size=
 met·​ric / ˈme-trik / n -
 A standard of measurement. In terms of the hour and
 minute, the current time is ${color1}${time %H:%M}${color0}. This computer has
-been on for ${color1}${uptime}${color0}.
+been on for ${color1}${uptime}${color0}. In terms of lifespan, this
+computer is ${color1}${battery BAT0}${color0}.
 # Network
 ${Font Latin Modern Roman :size=24} ${alignr}Internet Protocol${Font Latin Modern Roman:size=12}
 ad·​dress / ə-ˈdres  / adj -
@@ -71,3 +72,4 @@ also has a public ip when connected to the web. Its
 public ip is ${color1}${exec curl -s www.icanhazip.com}${color0}. Your current signal strength
 is around ${color1}${wireless_link_qual_perc wlp3s0}%${color0}. Up info: ${color1}${upspeed wlp3s0}${color0}/ ${color1}${totalup wlp3s0}${color0}.
 Down info: ${color1}${downspeed wlp3s0}${color0}/ ${color1}${totaldown wlp3s0}${color0}
+#
