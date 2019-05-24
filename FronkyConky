@@ -72,4 +72,5 @@ also has a public ip when connected to the web. Its
 public ip is ${color1}${exec curl -s www.icanhazip.com}${color0}. Your current signal strength
 is around ${color1}${wireless_link_qual_perc wlp3s0}%${color0}. Up info: ${color1}${upspeed wlp3s0}${color0}/ ${color1}${totalup wlp3s0}${color0}.
 Down info: ${color1}${downspeed wlp3s0}${color0}/ ${color1}${totaldown wlp3s0}${color0}
-# TODO PROCESSING
+# PROCESSING
+${Font Latin Modern Roman :size=24} ${alignr}Processing${Font Latin Modern Roman:size=12}
