@@ -50,13 +50,16 @@ show_graph_range no
 use_xft yes
 xftalpha 0.1
 xftfont Latin Modern Roman:size=14
+# Default theme is white / carmine red
 color0 white
 color1 FF7D7D
 color2 FFA300
 color3 grey
 
 TEXT
+#
 # Time
+#
 ${color0}
 ${Font Latin Modern Roman :size=24} ${alignr}Time${Font Latin Modern Roman:size=12}
 met·​ric / ˈme-trik / n -
@@ -64,13 +67,22 @@ A standard of measurement. In terms of the hour and
 minute, the current time is ${color1}${time %H:%M}${color0}. This computer has
 been on for ${color1}${uptime}${color0}. In terms of lifespan, this
 computer is ${color1}${battery BAT0}${color0}.
+#
 # Network
+#
 ${Font Latin Modern Roman :size=24} ${alignr}Internet Protocol${Font Latin Modern Roman:size=12}
-ad·​dress / ə-ˈdres  / adj -
+ad·​dress / ə-ˈdres / adj -
 This computer's local ip is ${color1}${gw_ip}${color0}. This computer
 also has a public ip when connected to the web. Its
-public ip is ${color1}${exec curl -s www.icanhazip.com}${color0}. Your current signal strength
+public ip is ${color1}${exec curl -s www.icanhazip.com}${color0}. The current signal strength
 is around ${color1}${wireless_link_qual_perc wlp3s0}%${color0}. Up info: ${color1}${upspeed wlp3s0}${color0}/ ${color1}${totalup wlp3s0}${color0}.
 Down info: ${color1}${downspeed wlp3s0}${color0}/ ${color1}${totaldown wlp3s0}${color0}
-# PROCESSING
-${Font Latin Modern Roman :size=24} ${alignr}Processing${Font Latin Modern Roman:size=12}
+#
+# HARDWARE (Designed for 4-core but add more as needed)
+#
+${Font Latin Modern Roman :size=24} ${alignr}Hardware${Font Latin Modern Roman:size=12}
+pro·​ces·​sor / ˈprä-ˌse-sər / n -
+a component of a computer that processes data. This
+computer's cpus are performing as such: CPU1 ${color1}${cpu cpu1}%${color0},
+CPU2 ${color1}${cpu cpu2}%${color0}, CPU3 ${color1}${cpu cpu3}%${color0}, CPU4 ${color1}${cpu cpu4}%${color0}. You have ${color1}${memeasyfree}${color0}
+of free RAM, and have used ${color1}${mem}${color0}.
